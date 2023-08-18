@@ -1,0 +1,44 @@
+<!-- app.component.html -->
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Login App</a>
+      <ul class="navbar-nav ms-auto">
+        <!-- Show 'Login' and 'Register' links if the user is not logged in -->
+        <li *ngIf="!isUserLoggedIn()" class="nav-item">
+          <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+        </li>
+        <li *ngIf="!isUserLoggedIn()" class="nav-item">
+          <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+        </li>
+
+        <!-- Show 'Logout' link if the user is logged in -->
+        <li *ngIf="isUserLoggedIn()" class="nav-item">
+          <button class="btn btn-danger" (click)="logout()">Logout</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- Protected Content -->
+  <div *ngIf="isUserLoggedIn()">
+    <!-- Display protected pages content here -->
+    <app-protected-page></app-protected-page>
+  </div>
+
+  <!-- Display login and registration components when the user is not logged in -->
+  <div class="container" *ngIf="!isUserLoggedIn()">
+    <router-outlet></router-outlet>
+  </div>
+
+  <footer class="footer mt-5 bg-dark text-white py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <p> Login App | Created by Rinku</p>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
