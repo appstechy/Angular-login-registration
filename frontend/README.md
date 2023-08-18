@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
 
-## Project Screenshot
+## Project Screenshots
 ![Project Screenshot](https://github.com/RinkuAppstechy/images/blob/main/login2.png)
 ![Project Screenshot](https://github.com/RinkuAppstechy/images/blob/main/login3.png)
 ![Project Screenshot](https://github.com/RinkuAppstechy/images/blob/main/login1.png)
